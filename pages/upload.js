@@ -1,6 +1,8 @@
 import styles from '../styles/upload.module.css';
 import axios from 'axios';
 import { useState } from 'react';
+import { Button } from '@nextui-org/react';
+
 import Layout from '../components/layout';
 
 export default function Upload() {
@@ -34,14 +36,21 @@ export default function Upload() {
     }
 
     return (
-        <Layout siteTitle='Upload your nft'>
+        <>
+        <Layout siteTitle='Upload your nft'> 
             <div className={styles.main}>
                 <div className={styles.container}>
                     <p className={styles.title}>ipfs courier</p>
                     <div className={styles.buttons}>
-                        <div className={styles.button} onClick={buttonChoose}>
+
+                        <Button 
+                            // iconRight={<CameraIcon fill="currentColor" />}
+                            size="lg"
+                            onClick={buttonChoose} 
+                            color="success"
+                        >
                             <p className={styles.buttonText}>choose file</p>
-                        </div>
+                        </Button>
                         {file &&
                             <div className={styles.button} onClick={buttonSend}>
                                 <p className={styles.buttonText}>send file</p>
@@ -52,6 +61,7 @@ export default function Upload() {
                 </div>
             </div>
         </Layout>
+        </>
     );
 }
 

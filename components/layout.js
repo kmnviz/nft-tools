@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import Link from 'next/link';
-import Navbar from './navbar';
+import Menu from './menu';
 import Styles from './layout.module.css';
 
 export default function Layout({children, siteTitle}) {
@@ -9,14 +8,14 @@ export default function Layout({children, siteTitle}) {
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <meta
-                name="description"
-                content="Learn how to build a personal website using Next.js"
+                    name="description"
+                    content=""
                 />
                 <meta name="og:title" content={siteTitle} />
                 <title>{siteTitle}</title>
             </Head>
             <header>
-               <Navbar></Navbar>
+               <Menu />
             </header>
             <div className={Styles.wrapper}>
                 {children}
