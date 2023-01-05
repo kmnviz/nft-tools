@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import React from "react";
 import { Navbar, Button, Link, Input, Row, Checkbox, Modal, Text, useTheme } from "@nextui-org/react";
 import { Mail } from './icons/mail';
@@ -14,9 +14,6 @@ export default function Menu() {
     const {isDark} = useTheme();
 
     const [visible, setVisible] = React.useState(false);
-    const handler = () => {
-      setVisible(true);
-    };
 
     const closeHandler = () => {
       setVisible(false);
@@ -85,14 +82,14 @@ export default function Menu() {
               ))}
             </Navbar.Content>
             <Navbar.Content>
-              <Navbar.Link color="inherit" onPress={handler}>
+              {/* <Navbar.Link color="inherit" onPress={handler}>
                 Login
               </Navbar.Link>
               <Navbar.Item>
                 <Button auto flat as={Link} color="primary" href="#">
                   Sign Up
                 </Button>
-              </Navbar.Item>
+              </Navbar.Item> */}
             </Navbar.Content>
           </Navbar>
       </>

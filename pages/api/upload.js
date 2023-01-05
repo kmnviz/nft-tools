@@ -21,12 +21,6 @@ export default async (req, res) => {
     }
 };
 
-// export const config = {
-//     api: {
-//         bodyParser: false,
-//     },
-// };
-//
 // export default async (req, res) => {
 //     console.log('req: ', req.method);
 //     if (req.method === 'POST') {
